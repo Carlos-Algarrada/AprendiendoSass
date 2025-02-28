@@ -1,0 +1,25 @@
+@use "sass:color"; // Importar el módulo correctamente
+
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: Arial, sans-serif;
+
+body {
+  font-family: $font-stack;
+  background-color: $primary-color;
+  color: white;
+  padding: 20px;
+}
+
+button {
+  background-color: $secondary-color;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: color.adjust($secondary-color, $lightness: -10%);
+  }
+}
