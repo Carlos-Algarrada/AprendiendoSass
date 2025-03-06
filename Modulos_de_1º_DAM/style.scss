@@ -1,0 +1,49 @@
+@use "sass:list"; // Importamos el módulo de listas
+
+// Lista de colores llamativos para las filas
+$colores: red, magenta, cyan, yellow, gray, orange;
+
+// Módulos con sus horas
+$modulos: (
+  "Programación": 8,
+  "Base de Datos": 6,
+  "Entornos de Desarrollo": 3,
+  "Sistemas Informáticos": 6,
+  "FOL": 3,
+  "Lenguaje de Marcas": 4
+);
+
+// Estilos de la tabla
+.modulos {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+
+  th, td {
+    border: 2px solid black;
+    padding: 10px;
+  }
+
+  th {
+    background-color: lime;
+    color: green;
+  }
+
+  // Aplicamos colores a las filas con @each y contador manual
+  $i: 1;
+  @each $nombre, $horas in $modulos {
+    tr:nth-child(#{$i + 1}) {
+      background-color: list.nth($colores, $i); // Ahora usa list.nth()
+      color: black;
+      font-weight: bold;
+
+      td:first-child {
+        font-size: 2rem - ($i * 0.2rem);
+        font-weight: bold;
+      }
+    }
+    $i: $i + 1;
+  }
+}
