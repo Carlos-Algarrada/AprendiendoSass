@@ -1,0 +1,14 @@
+@mixin centrar-bloque{
+    displauy:flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin centrar-en-linea {
+    text-align: center;
+    
+    > * {
+        display: inline-block;
+        margin: 0 auto;
+    }
+}
+

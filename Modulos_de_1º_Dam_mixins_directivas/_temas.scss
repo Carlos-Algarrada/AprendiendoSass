@@ -1,0 +1,50 @@
+@use "sass:list";
+@use "variables" as *;
+@use "mixins" as *;
+
+.contenedor {
+  @include centrar-bloque;
+  padding: 20px;
+}
+
+.modulos {
+  width: 80%;
+  max-width: $max-width;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  margin: auto;
+
+  th, td {
+    border: 2px solid black;
+    padding: 10px;
+  }
+
+  th {
+    background-color: lime;
+    color: green;
+  }
+
+  $i: 1;
+  @each $nombre, $horas in (
+    "Programación": 8,
+    "Base de Datos": 6,
+    "Entornos de Desarrollo": 3,
+    "Sistemas Informáticos": 6,
+    "FOL": 3,
+    "Lenguaje de Marcas": 4
+  ) {
+    tr:nth-child(#{$i + 1}) {
+      background-color: list.nth($colores, $i);
+      color: black;
+      font-weight: bold;
+
+      td:first-child {
+        font-size: 2rem - ($i * 0.2rem);
+        font-weight: bold;
+      }
+    }
+    $i: $i + 1;
+  }
+}

@@ -13,22 +13,22 @@ $modulos: (
   "Lenguaje de Marcas": 4
 );
 
-// Contenedor principal para centrar la tabla y dar espacio a los lados
+// Contenedor para centrar la tabla
 .contenedor {
   display: flex;
-  justify-content: center; // Centra la tabla
-  padding: 20px; // Espacios a los lados
+  justify-content: center;
+  padding: 20px;
 }
 
 // Estilos de la tabla
 .modulos {
-  width: 80%; // Ancho de la tabla
-  max-width: 800px; // Máximo tamaño de la tabla
+  width: 80%;
+  max-width: 800px;
   border-collapse: collapse;
   text-align: left;
   font-family: Arial, sans-serif;
   font-size: 1.2rem;
-  margin: auto; // Centrar horizontalmente
+  margin: auto;
 
   th, td {
     border: 2px solid black;
@@ -44,7 +44,7 @@ $modulos: (
   $i: 1;
   @each $nombre, $horas in $modulos {
     tr:nth-child(#{$i + 1}) {
-      background-color: list.nth($colores, $i); // Ahora usa list.nth()
+      background-color: list.nth($colores, $i);
       color: black;
       font-weight: bold;
 
@@ -54,5 +54,18 @@ $modulos: (
       }
     }
     $i: $i + 1;
+  }
+}
+
+// Generar estilos para los encabezados h1 - h6 con tamaños diferentes
+$h_sizes: (2.5rem, 2.2rem, 2rem, 1.8rem, 1.6rem, 1.4rem);
+$h_colors: (blue, darkgreen, darkred, purple, darkorange, black);
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: nth($h_sizes, $i);
+    color: nth($h_colors, $i);
+    text-align: center;
+    margin: 10px 0;
   }
 }

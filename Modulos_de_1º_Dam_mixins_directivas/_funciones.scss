@@ -1,0 +1,3 @@
+@function calcularAnchura($base, $factor){
+    @return $base * $factor;
+}

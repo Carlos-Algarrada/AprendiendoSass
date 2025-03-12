@@ -1,0 +1,11 @@
+@use "sass:list";
+@use "variables" as *;
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: list.nth($h_sizes, $i);
+    color: list.nth($h_colors, $i);
+    text-align: center;
+    margin: 10px 0;
+  }
+}

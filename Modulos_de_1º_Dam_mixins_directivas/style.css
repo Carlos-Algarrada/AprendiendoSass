@@ -1,0 +1,122 @@
+h1 {
+  font-size: 2.5rem;
+  color: blue;
+  text-align: center;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: darkgreen;
+  text-align: center;
+  margin: 10px 0;
+}
+
+h3 {
+  font-size: 2rem;
+  color: darkred;
+  text-align: center;
+  margin: 10px 0;
+}
+
+h4 {
+  font-size: 1.8rem;
+  color: purple;
+  text-align: center;
+  margin: 10px 0;
+}
+
+h5 {
+  font-size: 1.6rem;
+  color: darkorange;
+  text-align: center;
+  margin: 10px 0;
+}
+
+h6 {
+  font-size: 1.4rem;
+  color: black;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modulos {
+  width: 80%;
+  max-width: 800px;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  margin: auto;
+}
+.modulos th, .modulos td {
+  border: 2px solid black;
+  padding: 10px;
+}
+.modulos th {
+  background-color: lime;
+  color: green;
+}
+.modulos tr:nth-child(2) {
+  background-color: red;
+  color: black;
+  font-weight: bold;
+}
+.modulos tr:nth-child(2) td:first-child {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.modulos tr:nth-child(3) {
+  background-color: magenta;
+  color: black;
+  font-weight: bold;
+}
+.modulos tr:nth-child(3) td:first-child {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.modulos tr:nth-child(4) {
+  background-color: cyan;
+  color: black;
+  font-weight: bold;
+}
+.modulos tr:nth-child(4) td:first-child {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.modulos tr:nth-child(5) {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+}
+.modulos tr:nth-child(5) td:first-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.modulos tr:nth-child(6) {
+  background-color: grey;
+  color: black;
+  font-weight: bold;
+}
+.modulos tr:nth-child(6) td:first-child {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.modulos tr:nth-child(7) {
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+}
+.modulos tr:nth-child(7) td:first-child {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */
